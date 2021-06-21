@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<h1> Student Registration</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="col-4">
+        <div class="col-4">
+          <form action="{%url 'getreg'%}" method="post">
+            {%csrf_token%}
+<!--            cross site reuest forgery-->
+            <input type="text" placeholder="first name" name="fname">
+            <input type="text" placeholder="last name" name="lname">
+            <input type="text" placeholder="email" name="email">
+            <input type="text" placeholder="user name" name="uname">
+            <input type="text" placeholder="password" name="pwd">
+            <button> Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="{%url 'feedback'%}">Post your Feedback</a>
+
+</body>
+</html>
